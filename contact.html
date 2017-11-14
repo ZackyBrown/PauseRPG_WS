@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAUSE RPG</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body onload="btnCheckAnimals()">
+  <div class="main">
+    <!-- ******************************************************
+    |                     Barre de navigation                 |
+    ******************************************************* -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top"> <!-- Si vous la préférez en blanche, navbar-default. Mais moi je préfère le noir-->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-color" href="#">Pause RPG</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Acceuil</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                À propos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="infjeu.html">Le jeu</a><br>
+                <a class="dropdown-item" href="equipe.html">L'équipe</a>
+              </div>
+            </li>
+            <li><a href="#contact">Jouer</a></li>
+            <li class="active"><a href="#contact">Contactez nous !</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+
+    <!-- ************************************************
+    |     Petite banniere a voir ce qu'on met dedans    |
+    ************************************************* -->
+
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Contactez nous !</h1>
+            <p>Une remarque ? Un bug ? Ecrivez nous !</p>
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+
+
+
+    <!--****************************************
+    FORMULAIRE POUR NOUS CONTACTER SISI FRÉR
+    *****************************************-->
+
+    <!--=== debut formulaire ===-->
+    <div class="container">
+      <form>
+        <!-- pseudo ici -->
+        <div class="form-group">
+          <label for="pseudo">Pseudo :</label>
+          <input type="text" class="form-control" maxlength="50" placeholder="50 carac. max" id="pseudo" required>
+        </div>
+        <!-- Adresse email ici -->
+        <div class="form-group">
+          <label for="email">Email address :</label>
+          <input type="email" class="form-control" placeholder="exemple@domaine.fr" id="email" required>
+        </div>
+        <!-- Liste de motif ici -->
+        <div class="form-group">
+          <label for="sel1">Motif :</label>
+          <select class="form-control" id="listMotif" onchange="afficherMotif()" required>  <!-- onchange="afficherMotif()"-->
+            <option value="nope">Bug</option>
+            <option value="nope">Remarque</option>
+            <option value="nope">Soutien</option>
+            <option value="yep">Autre (précisez)</option>
+          </select>
+        </div>
+        <div class="form-group choixAutreHide" id="autreMotif" >
+          <label for="">Autre raison :</label>
+          <input type="text" class="form-control" id="raisonsA" maxlength="50" placeholder="max 50 carac."></div>
+          <!-- Message ici -->
+          <div class="form-group">
+            <label for="pwd">Votre message :</label>
+            <textarea class="form-control" rows="5" maxlength="500" placeholder="500 carac. max" id="comment" required></textarea>
+          </div>
+          <!-- LoL .. Juste comme ça ici -->
+          <div class="checkbox">
+            <label><input type="checkbox" id="aktaManniskor" onchange="btnCheckAnimals()"> Je ne suis pas un robot (animaux acceptés !)</label>
+          </div>
+          <button type="submit" class="btn btn-default" id="btnContact">Submit</button>
+        </form>
+      </div>
+
+
+      <!-- *********************
+      |         FOOTER         |
+      ********************** -->
+      <br><br>
+
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="About.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <p>&copy; Pause RPG | Tous droits réservés</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/local.js"></script>
+    </div>
+  </body>
+  </html>
